@@ -96,18 +96,54 @@ $c = 40;
 if($a == 30)
 {
     {
-        if($a < $b)
-        {
+        if($a < $b)	{
             echo 'a < b';
         }
-        elseif($a > $c)
-        {
+        elseif($a > $c)	{
             echo 'a > c';
-        }
-        else
-        {
+					}
+					else {
             echo 'C is greater than A and B';
         }
     }
 }
+
+//while and do loops
+$i = 0;
+		while ($i < 10) { // This where the While loop does the check for its conditions
+			echo $i . PHP_EOL;
+			$i++;
+		}
+$i = 0;
+		do {
+			echo $i . PHP_EOL;
+			$i++;
+		}	while ($i <10); //This where the Do While loop does the check for its conditions
+
+//breaking out of loops and continuing loops
+$ii = 0;
+	while (true) {
+		if ($ii == 10) {
+			break;
+		}
+		echo $ii . PHP_EOL;
+		$i++;
+	}
+
+	for ($ii = 0; $i < 10; $i++)	{
+		for ($j = 0; $j < 3; $j++) {
+			if (($j + $i) % 5 == 0) {
+				break 2;
+			}
+		}
+	}
+	for ($ii=0; $ii < 10 ; $ii++) {
+		if ($i > 3 && $i < 6) {
+			continue;
+		}
+		echo $i . PHP_EOL;
+	}
+
+// I need some clarification what is expected for namespaces: Dynamic Usage en Aliasing
+
 ?>
